@@ -1,4 +1,4 @@
-# Geofence_using_mern_
+# Geofence_using_mern
 This is a starter code for Geofence using Google map, MERN
 
 
