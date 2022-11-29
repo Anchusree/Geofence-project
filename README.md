@@ -2,7 +2,7 @@
 This is a starter code for Geofence using Google map, MERN
 
 
-Step 1: git clone this repo 
+Step 1: git clone this repo https://github.com/Anchusree/Geofence_using_mern_starter.git
 
 Step 2: cd to the cloned repo
 
