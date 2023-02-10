@@ -1,5 +1,5 @@
 # Geofence_using_mern
-This is a starter code for Geofence using Google map, MERN
+This is my own project for Geofence using Google map, React, Node, Express, Mysql.
 
 
 Step 1: git clone this repo https://github.com/Anchusree/Geofence_using_mern_starter.git
