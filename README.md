@@ -9,6 +9,8 @@ This is my own project for Geofence using Google map, React, Node, Express, Mysq
 - Save Polygon
 - Display Places
 - View All Polygons
+- Add Color to polygon
+- Check if polygon is inside or outside location
 
 Step 1: git clone this repo https://github.com/Anchusree/Geofence_using_mern_starter.git
 
