@@ -11,6 +11,7 @@ function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/viewAllMaps">View All Maps</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

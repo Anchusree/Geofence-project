@@ -11,6 +11,9 @@ function AddGeoMap() {
     const history = useHistory();
     const [mapInfo,setMapInfo] = useState([])
 
+    const [color,setColor] = useState('Grey')
+    let _color = ['Red','Green','Yellow','Blue','Pink','Orange']
+
     useEffect(async()=>{
         await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${name}&key=${process.env.REACT_APP_GOOGLEAPI}`)
         .then(resp=>resp.json())
@@ -38,13 +41,14 @@ function AddGeoMap() {
     const [state,setState] = useState([])
     const {paths} = state
 
+    console.log(state.paths)
 
     const new_path = JSON.stringify(state.paths)
-    //console.log(new_path)
+    console.log(new_path)
 
 
     const saveMap = async()=>{
-      await axios.post("http://localhost:2000/api/addMap",{parentId:mapInfo.data[0].id,coordinates:new_path})
+      await axios.post("http://localhost:2000/api/addMap",{parentId:mapInfo.data[0].id,coordinates:new_path,color:color})
       .then(response=>{
         if(response){
           alert(`${response.data.msg}`)
@@ -62,14 +66,27 @@ function AddGeoMap() {
       }
     }
 
+    const handleColorChange =(e)=> setColor(e.target.value)
+
 
   return (
     <div >
+      <select value={color} onChange={handleColorChange}>
+        <option>Select</option>
+        {
+          _color.map((item,index)=>
+          <option key={index}>{item}</option>
+          )
+        }
+      </select>
+
       <GeoMaps
         apiKey ={process.env.REACT_APP_GOOGLEAPI}
         center={center}
         paths = {paths}
         point={paths => setState({paths})}
+        color={color}
+        setColor ={setColor}
       /> 
       <br/><br/><br/><br/>
       {

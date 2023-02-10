@@ -3,7 +3,7 @@ import React, { useCallback, useRef, useState } from 'react'
 import { GoogleMap, LoadScript,DrawingManager, Marker, Polygon } from '@react-google-maps/api'
 
 
-export default function GeoMaps({apiKey,center,paths=[],point}) {
+export default function GeoMaps({apiKey,center,paths=[],point,color}) {
    
     const [path,setPath] = useState(paths)
     const [state,setState] = useState({
@@ -107,7 +107,7 @@ export default function GeoMaps({apiKey,center,paths=[],point}) {
            (
             <Polygon 
             options={{
-                fillColor:'#2196F3',
+                fillColor: color ? color :'#2196F3',
                 strokeColor:'#2196F3',
                 fillOpacity:0.5,
                 strokeWeight:2
@@ -123,7 +123,6 @@ export default function GeoMaps({apiKey,center,paths=[],point}) {
         }
 
             <Marker position={center}/>
-
 
             </GoogleMap>
 
