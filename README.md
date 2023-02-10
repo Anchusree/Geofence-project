@@ -6,7 +6,7 @@ This is my own project for Geofence using Google map, React, Node, Express, Mysq
 - Draw Polygon
 - Edit Polygon
 - Delete polygon
-- Save Polygon
+- Save Polygon to database
 - Display Places
 - View All Polygons
 - Add Color to polygon
