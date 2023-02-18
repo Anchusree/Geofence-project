@@ -11,6 +11,7 @@ Watch Mern Stack series on Youtube: https://tinyurl.com/mt2xe44u
 - Delete polygon
 - Save Polygon to database
 - Display Places
+- Manage edit/delete and update data
 - View All Polygons
 - Add Color to polygon
 - Check if polygon is inside or outside location
