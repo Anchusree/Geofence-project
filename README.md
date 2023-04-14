@@ -1,5 +1,5 @@
 # Geofence_using_mern
-This is my own project for Geofence using Google map, React, Node, Express, Mysql.
+Project for Geofence using Google map, React, Node, Express, Mysql.
 
 Watch Geofence series on Youtube: https://tinyurl.com/mt2xe44u
 
