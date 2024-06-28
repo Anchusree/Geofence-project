@@ -2,13 +2,15 @@ const db = require('../db');
 
 module.exports.addName = (req,res)=>{
     const name = req.body.name
+     const latitude= req.body.latitude
+    const longitude = req.body.longitude
     const checkName = "select * from store where name=?"
     db.query(checkName,name,(err,response)=>{
         if(response.length>0){
             res.status(422).json({msg:'This place is already added in the list!'})
         }
         else{
-            db.query("INSERT INTO store(name) VALUES(?)",name,(err,result)=>{
+            db.query("INSERT INTO store(name, latitude, longitude) VALUES(?,?,?)",[name,latitude,longitude],(err,result)=>{
                 if(err){
                     console.log(err);
                 }
