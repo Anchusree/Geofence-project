@@ -1,5 +1,5 @@
 const express = require('express');
-const { addName, mapInfo, addMap} = require('../controllers/mapController');
+const { addName, mapInfo, addMap, getAllMaps, getGeoMapinfo, updateGeoMap, deleteMap, deleteMapName, getAllCoordinateMaps, viewAllMaps} = require('../controllers/mapController');
 const router = express.Router();
 
 
