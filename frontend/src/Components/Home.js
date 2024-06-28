@@ -26,8 +26,11 @@ export default function Home() {
            await setLatitude(place.results[0].geometry.location.lat)
            await setlongitude(place.results[0].geometry.location.lng)
 
-           if(latitude && longitude){
-            await axios.post('http://localhost:2000/api/addName',{name:name, latitude:latitude,longitude:longitude})
+          // if(latitude && longitude){
+            await axios.post('http://localhost:2000/api/addName',{
+                name:name, 
+                latitude:place.results[0].geometry.location.lat,
+                longitude:place.results[0].geometry.location.lng})
             .then(response=>{
                 if(response){
                     message = response.data.msg
@@ -35,11 +38,11 @@ export default function Home() {
                 }
             })
             .catch(err=>console.log(err))
-           }
+           //}
            
-           else{
-            console.log("Something went wrong");
-           }
+           // else{
+           //  console.log("Something went wrong");
+           // }
          
 
 
