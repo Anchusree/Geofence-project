@@ -52,6 +52,7 @@ export default function ViewAllMaps() {
             mapContainerClassName='appmap'
             center={{lat:12.983379, lng:76.0660051}}
             zoom={6}
+            onDrag={true}
           >
             {
                 geoState !== undefined
