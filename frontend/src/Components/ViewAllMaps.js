@@ -21,7 +21,7 @@ export default function ViewAllMaps() {
                     allGeoMaps.push({color:maps.color,coordinates:JSON.parse(maps.coordinates + '}]')})
                 )
                 setGeoState(allGeoMaps)
-                console.log("geoState",geoState)
+                //console.log("geoState",geoState)
             })
     }
 
